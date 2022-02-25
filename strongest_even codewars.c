@@ -14,7 +14,7 @@ int strongest_even(unsigned long long int n, unsigned long long int m) {
     return p*i;
   }
 }
-/*
+/* this is working but not mine
 int strongest_even(int n, int m) {
   for (; (m & m - 1) >= n; m &= m - 1);
   return m;

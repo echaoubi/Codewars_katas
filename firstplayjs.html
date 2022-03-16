@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+h1{
+
+    text-align: center;
+
+    font-weight: bold;
+
+    font-family: "Sofia", sans-serif;
+    color:white;
+    
+
+
+
+}
+div.ab{
+
+
+}
+
+p{
+    text-align: left;
+
+  font-size:15px;
+  margin-top: 3%;
+  margin-left: 10%;
+    font-family: "Trirong", serif;
+
+  
+}
+i{
+
+
+
+
+}
+div.al{
+	border: 2px solid;
+  background-color:violet;
+    margin-top: 8%;
+  border-radius: 13px;      
+
+}
+div.b{
+	margin: auto;
+  		width: 50%;
+      margin-top: 3%;
+	  padding: 1%;
+
+	border: 2px solid;
+  border-radius: 25px;      
+  background-color:white;
+
+
+}
+body{
+	margin: auto;
+  width: 80%;
+	
+
+}
+
+</style>
+
+</head>
+<body>
+<div class="al" id="al">
+<div class ="b">
+<div class ="ab" style="text-align: center;">
+
+<i class="fas fa-cloud" style="font-size:36px;" onclick=black();></i>
+<i class="fas fa-cloud" style="font-size:36px;color:orange;" onclick=orange();></i>
+
+<i class="fas fa-cloud" style="font-size:36px;color:green;"  onclick=green()></i>
+<i class="fas fa-cloud" style="font-size:36px;color:red;" onclick=red()></i>
+<i class="fas fa-cloud" style="font-size:36px;color:lightblue;" onclick=lightblue()></i>
+</div>
+</div>
+<div class="a", id ="a">
+<h1>JavaScript Numbers</h1>
+
+<p>Floating point arithmetic is not always 100% accurate:</p>
+<p id="demo1"></p>
+
+<p>But it helps to multiply and divide:</p>
+
+<p id="demo2"></p>
+</div>
+</div>
+<script>
+function black() {
+  document.getElementById("al").style.backgroundColor = "black";
+  document.getElementById("a").style.color = "#7fe";
+}
+function green() {
+  document.getElementById("al").style.backgroundColor = "green";
+    document.getElementById("a").style.color = "black";
+
+}
+function red() {
+  document.getElementById("al").style.backgroundColor = "red";
+      document.getElementById("a").style.color = "HoneyDew";
+
+}
+function lightblue() {
+  document.getElementById("al").style.backgroundColor = "lightblue";
+    document.getElementById("a").style.color = "black";
+
+}
+function orange() {
+  document.getElementById("al").style.backgroundColor = "orange";
+    document.getElementById("a").style.color = "black";
+
+}
+</script>
+
+
+<script>
+var x = 0.2 + 0.1;
+document.getElementById("demo1").innerHTML = "0.2 + 0.1 = " + x;
+let y = (0.2*10 + 0.1*10) / 10;
+document.getElementById("demo2").innerHTML = "0.2 + 0.1 = " + y;
+</script>
+
+</body>
+</html>
+
+

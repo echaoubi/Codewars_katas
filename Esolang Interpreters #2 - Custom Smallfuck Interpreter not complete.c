@@ -1,3 +1,5 @@
+#not complete https://www.codewars.com/kata/58678d29dbca9a68d80000d7/solutions/python
+
 def interpreter(code, tape):
     print(code)
     print(tape)

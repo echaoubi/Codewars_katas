@@ -1,0 +1,41 @@
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	rush(int x, int y)
+{
+	int		line;
+	int		column;
+	line = 0;
+	int ps=0;
+	while (line < y)
+	{
+		column = 0;
+		while (column < x)
+		{
+			if (line == 0 || line == y - 1)
+			    if((column == 0|| column == x - 1)){
+			        if(ps%3==0) ft_putchar('/');
+			        else ft_putchar('\\');
+                    ps++;
+			    } 
+			    else ft_putchar('*');
+			else
+			    if(column == 0|| column == x - 1) ft_putchar('*');
+			    else ft_putchar(' ');
+			column++;
+		}
+		ft_putchar('\n');
+		line++;
+	}
+}
+
+
+int main()
+{
+    rush(10,6);
+    return 0;
+}

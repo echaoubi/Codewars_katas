@@ -1,0 +1,45 @@
+#This is ridiculously not even fun...
+
+
+class Solution(object):
+    def myAtoi(self, s):
+        if(s=="" or s=="-"):
+            return 0
+        if(s[0].isalpha()):
+            return 0
+        if(len(s)>1 and "+" == s[0] and "-" == s[1]):
+            return 0
+        txt=""
+        i=0
+        l=0
+        while(i <len(s)):
+            if(s[i].isdigit() or s[i] == "-"):
+                if(i+1<len(s) and s[i+1] == "-" and s[i] == "-"):
+                    return 0
+                txt+=s[i]
+                l=1
+            if(s[i]=="+" and i+1<len(s) and not s[i+1].isdigit()) and not s[-1]=="+":
+                return 0
+            if(s[i]=="." or s[i].isalpha()or(l and not (s[i].isdigit() or s[i]=="-"))):
+                i=len(s)
+            i+=1
+        if(txt==""):
+            return 0
+        res=1
+        
+        try:
+            o = int(txt)
+        except:
+            if("-" == txt[0] and len(txt)>1):
+                txt=txt[0]+txt[1:].replace("-", "")
+                return int(txt)
+            print(txt)
+            if(len(txt)>3 and "-" == txt[3] ):
+                txt=txt[0]+txt[1:].replace("-", "")
+                return int(txt)
+            return 0
+        if(o<(-pow(2,31))):
+            return -2147483648
+        if(o>(pow(2,31)-1)):
+            return 2147483647
+        return o
